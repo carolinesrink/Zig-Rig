@@ -14,29 +14,7 @@ const UserSchema = new Schema({
       type: String,
       trim: true,
       required: "Password is Required",
-      // validate: [
-      //   function(input) {
-      //     return input.length >= 6;
-      //   },
-      //   "Password should be longer."
-      // ]
-    },
-
-    email: {
-      type: String,
-      unique: true,
-      match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
-    },
-
-    project: {
-        type: Schema.Types.ObjectId,
-        ref: "Project"
-      },
-
-    load: {
-        type: Schema.Types.ObjectId,
-        ref: "load"
-      }  
+    }
     
   });
 

@@ -16,7 +16,12 @@ const ProjectSchema = new Schema({
         voltage: {type: Number, required: true},
         connections: [{type: String, required: true}]
       }
-    ]
+    ],
+
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User"
+    } 
 
 });
 
