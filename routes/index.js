@@ -4,7 +4,7 @@ var path = require('path');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	//res.render('index', { title: 'Express' });
+	//Return built index.html from React
 	res.sendFile(path.join(__dirname,'../view/build/index.html'));
 });
 
