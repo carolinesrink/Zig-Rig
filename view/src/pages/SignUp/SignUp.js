@@ -4,6 +4,7 @@ import { Input, FormBtn } from "../../components/Forms";
 
 class SignIn extends Component {
     state = {
+        email: "",
         username: "",
         password: ""
     };
@@ -17,8 +18,8 @@ class SignIn extends Component {
 
     handleSignIn = event => {
         event.preventDefault();
-        if (this.state.username && this.state.password) {
-            console.log("Logged In");
+        if (this.state.email && this.state.username && this.state.password) {
+            console.log("Signed Up");
         } else {
             console.log("error");
         }
@@ -34,6 +35,12 @@ class SignIn extends Component {
                     <Column>
                         <form>
                             <Input
+                                value={this.state.email}
+                                onChange={this.handleInputChange}
+                                name="email"
+                                placeholder="Email"
+                            />
+                            <Input
                                 value={this.state.username}
                                 onChange={this.handleInputChange}
                                 name="username"
@@ -46,17 +53,17 @@ class SignIn extends Component {
                                 placeholder="Password"
                             />
                             <FormBtn
-                                disabled={!(this.state.username && this.state.password)}
+                                disabled={!(this.state.email && this.state.username && this.state.password)}
                                 onClick={this.handleSignIn}
                             >
-                            Sign In
+                            Sign Up!
                             </FormBtn> 
                         </form>
                     </Column>
                 </Row>
                 <Row>
-                    <p>Don't have an accout?<br />
-                    <a href="/signup">Sign up here.</a>
+                    <p>Have an accout?<br />
+                    <a href="/">Sign in here.</a>
                     </p>
                 </Row>
             </Container>

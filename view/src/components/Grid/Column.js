@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Col = ({ size, children }) => (
+export const Column = ({ size, children }) => (
   <div className={size.split(" ").map(size => "col-" + size).join(" ")}>
     {children}
   </div>
