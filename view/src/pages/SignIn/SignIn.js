@@ -28,10 +28,10 @@ class SignIn extends Component {
         return (
             <Container fluid>
                 <Row>
-                    <img id="logo" src="../images/logo.png" alt="Zig-Rig Logo" class="center" />
+                    <img id="logo" src="./public/images/logo.png" alt="Zig-Rig Logo" class="center" />
                 </Row>
                 <Row>
-                    <Column>
+                    <Column size="md-6">
                         <form>
                             <Input
                                 value={this.state.username}

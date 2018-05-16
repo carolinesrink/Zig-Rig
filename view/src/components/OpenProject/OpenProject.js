@@ -3,7 +3,7 @@ import "./OpenProject.css";
 
 const OpenProject = props => (
   <span className="openProject" {...props}>
-    Open Project
+    Open
   </span>
 );
 

@@ -3,7 +3,7 @@ import "./SaveButton.css"
 
 const SaveButton = props => (
   <span className="saveButton" {...props}>
-    Save Generator
+    Save
   </span>
 );
 

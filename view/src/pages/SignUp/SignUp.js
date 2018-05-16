@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Column, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Forms";
 
-class SignIn extends Component {
+class SignUp extends Component {
     state = {
         email: "",
         username: "",
@@ -16,7 +16,7 @@ class SignIn extends Component {
         });
     };
 
-    handleSignIn = event => {
+    handleSignUp = event => {
         event.preventDefault();
         if (this.state.email && this.state.username && this.state.password) {
             console.log("Signed Up");
@@ -29,10 +29,10 @@ class SignIn extends Component {
         return (
             <Container fluid>
                 <Row>
-                    <img id="logo" src="../images/logo.png" alt="Zig-Rig Logo" class="center" />
+                    <img id="logo" src="./public/images/logo.png" alt="Zig-Rig Logo" class="center" />
                 </Row>
                 <Row>
-                    <Column>
+                    <Column size="md-6">
                         <form>
                             <Input
                                 value={this.state.email}
@@ -54,7 +54,7 @@ class SignIn extends Component {
                             />
                             <FormBtn
                                 disabled={!(this.state.email && this.state.username && this.state.password)}
-                                onClick={this.handleSignIn}
+                                onClick={this.handleSignUp}
                             >
                             Sign Up!
                             </FormBtn> 
@@ -72,4 +72,4 @@ class SignIn extends Component {
     }
 }
 
-export default SignIn;
+export default SignUp;
