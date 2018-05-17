@@ -2,14 +2,25 @@
   "name": "zig-rig",
   "version": "0.0.0",
   "private": true,
+	"main":"./bin/www",
   "scripts": {
-    "start": "node ./bin/www",
-		"heroku-postbuild": "cd view && yarn --production=false && yarn run build"
+		"start": "if-env NODE_ENV=production && yarn start:prod || yarn start:dev",
+    "start:prod": "node ./bin/www",
+    "start:dev": "concurrently \"nodemon --ignore 'view/*'\" \"yarn run client\"",
+    "client": "cd view && npm run start",
+    "install": "cd view; yarn install;",
+    "build": "cd view && yarn build",
+    "heroku-postbuild": "yarn build"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
+    "if-env": "^1.0.4",
     "morgan": "~1.9.0"
   }
 }
