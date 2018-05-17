@@ -1,0 +1,29 @@
+#logo {
+    width: 150px;
+    float: left;
+}
+
+#nav-bar {
+    margin: 25px 50px 0px 0px;
+}
+
+body {
+    background: grey;
+}
+
+.topDiv {
+    margin-top: 35px;
+}
+
+.form-control {
+    margin-left: 5%;
+    width: 25%;
+}
+
+.saveButton {
+    margin-left: 5%;
+}
+
+.lowerDiv {
+    margin-left: 15%;
+}

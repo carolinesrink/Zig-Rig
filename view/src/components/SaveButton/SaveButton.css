@@ -1,0 +1,14 @@
+.saveButton {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px 44px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.saveButton:hover {
+    background-color: rgb(185, 185, 185);
+    border-color: black;
+    cursor: pointer;
+}
