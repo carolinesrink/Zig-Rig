@@ -3,7 +3,7 @@ import "./AddSource.css";
 
 const AddSource = props => (
   <span className="addSource" {...props}>
-    Add Source
+    Add New Power Source
   </span>
 );
 

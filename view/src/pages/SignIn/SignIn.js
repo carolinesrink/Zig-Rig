@@ -8,6 +8,10 @@ class SignIn extends Component {
         password: ""
     };
 
+    componentWillMount () {
+        const css = require( "./SignIn.css" );
+    }
+
     handleInputChange = event => {
         const {name, value} = event.target;
         this.setState({
@@ -27,9 +31,7 @@ class SignIn extends Component {
     render() {
         return (
             <Container fluid>
-                <Row>
-                    <img id="logo" src="./public/images/logo.png" alt="Zig-Rig Logo" class="center" />
-                </Row>
+                <img id="logo" src="/images/logo.png" alt="Zig-Rig Logo" className="center" />
                 <Row>
                     <Column size="md-6">
                         <form>
@@ -39,12 +41,14 @@ class SignIn extends Component {
                                 name="username"
                                 placeholder="Username"
                             />
+                            <br />
                             <Input
                                 value={this.state.password}
                                 onChange={this.handleInputChange}
                                 name="password"
                                 placeholder="Password"
                             />
+                            <br />
                             <FormBtn
                                 disabled={!(this.state.username && this.state.password)}
                                 onClick={this.handleSignIn}
@@ -55,7 +59,7 @@ class SignIn extends Component {
                     </Column>
                 </Row>
                 <Row>
-                    <p>Don't have an accout?<br />
+                    <p className="account">Don't have an accout?<br />
                     <a href="/signup">Sign up here.</a>
                     </p>
                 </Row>

@@ -3,7 +3,9 @@
     color: white;
     border: 1px solid white;
     border-radius: 8px;
-    padding: 10px 34px;
+    padding: 10px 44px;
+    margin-left: 12px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .deleteProject:hover {

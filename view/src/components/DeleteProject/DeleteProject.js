@@ -3,7 +3,7 @@ import "./DeleteProject.css";
 
 const DeleteProject = props => (
   <span className="deleteProject" {...props}>
-    Delete Project
+    Delete
   </span>
 );
 

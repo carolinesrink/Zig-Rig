@@ -3,13 +3,8 @@ import "./NavBar.css"
 
 const NavBar = () => (
     <nav id="nav-bar">
-        Welcome!
         <a id="account" href="/account">
-            Your account
-        </a>
-        <br />
-        <a id="logout" href="/">
-            Logout
+            Your Account
         </a>
     </nav>
 );

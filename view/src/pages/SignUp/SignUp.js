@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Column, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Forms";
+import "./SignUp.css";
 
 class SignUp extends Component {
     state = {
@@ -28,9 +29,12 @@ class SignUp extends Component {
     render() {
         return (
             <Container fluid>
+                <img id="logo" src="/images/logo.png" alt="Zig-Rig Logo" className="center" />
                 <Row>
-                    <img id="logo" src="./public/images/logo.png" alt="Zig-Rig Logo" class="center" />
+                    <h3>Welcome to Zig-Rig! Zig-Rig is a simple, easy-to-use online  planning tool for <br />
+                        calculating electrical power distribution for a multitude of power sources. </h3>
                 </Row>
+                <br />
                 <Row>
                     <Column size="md-6">
                         <form>
@@ -40,18 +44,21 @@ class SignUp extends Component {
                                 name="email"
                                 placeholder="Email"
                             />
+                            <br />
                             <Input
                                 value={this.state.username}
                                 onChange={this.handleInputChange}
                                 name="username"
                                 placeholder="Username"
                             />
+                            <br />
                             <Input
                                 value={this.state.password}
                                 onChange={this.handleInputChange}
                                 name="password"
                                 placeholder="Password"
                             />
+                            <br />
                             <FormBtn
                                 disabled={!(this.state.email && this.state.username && this.state.password)}
                                 onClick={this.handleSignUp}
@@ -62,7 +69,7 @@ class SignUp extends Component {
                     </Column>
                 </Row>
                 <Row>
-                    <p>Have an accout?<br />
+                    <p className="account">Have an accout?<br />
                     <a href="/">Sign in here.</a>
                     </p>
                 </Row>
