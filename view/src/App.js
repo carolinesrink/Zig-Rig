@@ -1,8 +1,12 @@
 import React from 'react';
+// import {withAuthenticator} from 'aws-amplify-react';
+// import Amplify from 'aws-amplify';
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import BasicGen from "./pages/BasicGen";
+
 
 const App = () => (
 
@@ -20,3 +24,8 @@ const App = () => (
 );
 
 export default App;
+// export default withAuthenticator(app);
+
+// withAuthenticator creates the pre-built user Authentication.
+// we can create our own UI for it but I want to test if it works 
+// before playing with creating our own UI.
