@@ -7,8 +7,7 @@ router.route("/")
   .post(loadTemplateController.create);
 
 // Matches with "/api/loads/:id"
-router
-  .route("/:id")
+router.route("/:id")
   .get(loadTemplateController.findById)
   .put(loadTemplateController.update)
   .delete(loadTemplateController.remove);

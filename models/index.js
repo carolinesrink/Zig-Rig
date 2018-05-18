@@ -1,6 +1,6 @@
 module.exports = {
-    User: require("./User"),
-    Project: require("./Project"),
-    LoadTemplate: require("./LoadTemplate")
+    User: require("./user"),
+    Project: require("./project"),
+    LoadTemplate: require("./loadTemplate")
   };
   
