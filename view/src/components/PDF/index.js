@@ -1,1 +1,1 @@
-export * from "./PDF";
+export * from "./PDF.js";
